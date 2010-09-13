@@ -1,0 +1,19 @@
+DownloadBundle
+
+This bundle is to assist in downloading files from the browser. It has 2 primary purposes
+
+* download a protected file
+* force downloading of files, instead of executing in browser
+
+To use the bundle, at a minimum, you need to add a 'download_location' field to your model.
+This can be a full path on the local server or a url to the file, if it is located on a different server.
+You can optionally put the a 'download_filesize' field, to make sure the file size if displayed
+during in the download dialog.  If the 'download_filesize' is not provided, finding the file size
+from the file will be attempted, but this is not always successful.
+
+The default route for the download is download/Application\YourBundle\Entity(Document)\Model/:id
+
+If you use a local file, the filename should be from the app root.
+
+I have not tested the odm at all, so no promises on that. Also, I do not have any tests
+written for the controller.

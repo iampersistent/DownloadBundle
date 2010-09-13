@@ -1,0 +1,3 @@
+download:
+    pattern:        /download/:model/:id
+    defaults:       { _controller: DownloadBundle:Download:download }
